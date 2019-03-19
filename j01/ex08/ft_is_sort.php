@@ -1,12 +1,9 @@
 <?php
 function ft_is_sort($tab)
 {
-
-	$new_array = $tab;
-	sort($new_array);
-	for ($i = 0; $i < count($tab); $i++)
+	for ($i = 0; $i < count($tab) - 1; $i++)
 	{
-		if ($new_array[$i] != $tab[$i])
+		if ($tab[$i] > $tab[$i + 1])
 			return (0);
 	}
 	return (1);
