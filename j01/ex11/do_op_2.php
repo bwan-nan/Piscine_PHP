@@ -4,15 +4,15 @@
 function	do_op($a, $b, $operator)
 {
 	if ($operator == '+')
-		print($a + $b);
+		return ($a + $b);
 	else if ($operator == '-')
-		print($a - $b);
+		return ($a - $b);
 	else if ($operator == "*")
-		print($a * $b);
+		return ($a * $b);
 	else if ($operator == '/')
-		print($a / $b);
+		return ($a / $b);
 	else if ($operator == '%')
-		print($a % $b);
+		return ($a % $b);
 }
 
 
@@ -22,6 +22,9 @@ function		replace_spaces($string)
 		$result = substr_replace($string, ' + ', strpos($string, '+'), 1);
 	if (strpos($string, '-'))
 		$result = substr_replace($string, ' - ', strpos($string, '-'), 1);
+	else if ($string[0] == '-' && strcspn($string, "+*/%") == strlen($string)
+	&& strpos($string, '-', 1))
+		$result = substr_replace($string, ' - ', strpos($string, '-', 1), 1);
 	if (strpos($string, '*'))
 		$result = substr_replace($string, ' * ', strpos($string, '*'), 1);
 	if (strpos($string, '/'))
@@ -61,6 +64,6 @@ else
 	if (!is_numeric($result[0]) || !is_numeric($result[2]) || strcspn($result[1], "+-*/%"))
 		echo "Syntax Error\n";
 	else
-		do_op($result[0], $result[2], $result[1]);
+		echo do_op($result[0], $result[2], $result[1])."\n";
 }
 ?>

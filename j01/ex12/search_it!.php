@@ -2,16 +2,16 @@
 <?php
 if ($argc >= 3)
 {
-	$string = str_replace(':', '=', $argv[3]);
-	$tab = explode(' ', $string);
+	$string = str_replace(':', '=', $argv[2]);
+	parse_str($string, $hash_table);
 	for ($i = 3; $i < $argc; $i++)
 	{
 		$string = str_replace(':', '=', $argv[$i]);
-		$new_tab = explode(' ', $string);	
-		$tab = array_merge($tab, $new_tab);
+		parse_str($string, $new_table);
+		$hash_table= array_merge($hash_table, $new_table);
 	}
-	parse_str($string, $output);
-	if (array_key_exists($argv[1], $output))
-		echo $output[$argv[1]]."\n";
+	print_r($hash_table);
+	if (array_key_exists($argv[1], $hash_table))
+		echo $hash_table[$argv[1]]."\n";
 }
 ?>

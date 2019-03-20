@@ -1,9 +1,17 @@
 #!/usr/bin/php
 <?php
 
+function	ft_strlen($string)
+{
+	$i = 0;
+	while ($string[$i] != '')
+		$i++;
+	return ($i);
+}
+
 function	get_position($char, $alphabet)
 {
-	for ($i = 0; $i < strlen($alphabet); $i++)
+	for ($i = 0; $i < ft_strlen($alphabet); $i++)
 	{
 		if ($alphabet[$i] == $char)
 			return ($i);
@@ -13,7 +21,7 @@ function	get_position($char, $alphabet)
 
 function		custom_strcmp($str1, $str2, $alphabet)
 {
-	$stop = min(strlen($str1), strlen($str2));
+	$stop = min(ft_strlen($str1), ft_strlen($str2));
 	for ($i = 0; $i < $stop; $i++)
 	{
 		if (get_position($str1[$i], $alphabet) > get_position($str2[$i], $alphabet))
