@@ -7,8 +7,8 @@ while (1)
 	$input = trim(fgets(STDIN));
 	if (feof(STDIN))
 	{
-		echo "^D\n";
-		break ;
+		echo "\n";
+		exit (0);
 	}
 	if (!is_numeric($input))
 		print("'$input' is not a number\n");
