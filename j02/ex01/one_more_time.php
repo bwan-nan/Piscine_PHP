@@ -13,7 +13,7 @@
 
 function		leap_exceptions($array)
 {
-	/* If it is a leap year (1972 being the first leap year in Unix Time) */
+	/* Find out if it is a leap year (1972 being the first leap year in Unix Time) */
 	if (($array['tm_year'] - 72) % 4 == 0)
 		$is_leap_year = 1;
 
@@ -29,7 +29,7 @@ if ($argc ==2)
 
 	setlocale(LC_TIME, 'fr_FR');
 	$array = strptime($argv[1], '%A %d %B %Y %H:%M:%S');
-	print_r($array);
+//	print_r($array);
 	if ($array && ($is_leap_year = leap_exceptions($array)) != -1)
 	{
 		$leapy_days = ($array['tm_year'] - 70 + 2) / 4;
