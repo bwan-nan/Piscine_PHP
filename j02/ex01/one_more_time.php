@@ -11,6 +11,15 @@
 **  simply because the end of 32 bit Unix Time will occur on January 19, 2038 (it will overflow)
 */
 
+function		wrong_format_31days($array)
+{
+	$months_with_30days = array(3, 5, 8, 10);
+	foreach ($months_with_30days as $elem)
+		if ($array['tm_mon'] == $elem && $array['tm_mday'] >= 31)
+			return (1);
+	return (0);
+}
+
 function		leap_exceptions($array)
 {
 	/* Find out if it is a leap year (1972 being the first leap year in Unix Time) */
@@ -18,7 +27,7 @@ function		leap_exceptions($array)
 		$is_leap_year = 1;
 
 	if ($array['tm_mday'] >= 29 && $array['tm_mon'] == 1)
-		if ($array['tm_day'] > 29 || $array['tm_mday'] == 29 && !$is_leap_year)
+		if ($array['tm_mday'] > 29 || $array['tm_mday'] == 29 && !$is_leap_year)
 			return (-1);
 
 	return ($is_leap_year ? 1 : 0);
@@ -30,7 +39,8 @@ if ($argc ==2)
 	setlocale(LC_TIME, 'fr_FR');
 	$array = strptime($argv[1], '%A %d %B %Y %H:%M:%S');
 //	print_r($array);
-	if ($array && ($is_leap_year = leap_exceptions($array)) != -1)
+	if ($array && ($is_leap_year = leap_exceptions($array)) != -1
+	&& !wrong_format_31days($array))
 	{
 		$leapy_days = ($array['tm_year'] - 70 + 2) / 4;
 		$timestamp = ($array['tm_year'] - 70) * 86400 * 365
