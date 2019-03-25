@@ -1,28 +1,22 @@
 * {
 	line-height: 10%;
 }
-
 body {
 	background-size: 100%;
 	background-image: url("https://i.kinja-img.com/gawker-media/image/upload/s--if0q4tqs--/c_scale,f_auto,fl_progressive,q_80,w_1600/wpkqlw3gkzfznqaupkza.gif");
 }
 
 h1 {
-	font-size: 4vw;
 	color: white;
 	text-align: center;
 }
 
-table {
-	padding-bottom: 3%;
-	margin-left: 20%;
-}
-
 td {
-	height: auto;
+	width: 2%;
+	height: 2%;
 	padding: 0;
+	border-radius: 15px; 
 	font-size: 0;
-	border-radius: 10px;
 }
 
 .lime {
@@ -75,45 +69,54 @@ td {
 	border: thin black solid;
 }
 
-.white {
-	background-color: white;
-	border: thin black solid;
-}
-
 .weight {
-	font-size: 1vw;
+	font-size: 1vmin;
 	text-align: right;
 }
 
 .elem {
 	font-weight: 900;
-	font-size: 1.2vw;
+	font-size: 1.5vmin;
 	text-align: center;
 }
 
 .nb {
-	font-size: 1vw;
+	font-size: 1vmin;
+}
+
+#align-legend {
+	text-align: center;
 }
 
 .legend {
-	padding-bottom: 0;
+	display: inline-block;
+	list-style: none;
 }
 
-.legend table tr td {
-	width: 5%;
-	height: 5%;
+.legend li {
+	float: left;
+	margin-right: 10px;
+}
+
+.legend span {
+	border: 1px solid #ccc;
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 2px;
 }
 
 .legend p {
-	font-size: 1vw;
-	text-align: center;
+	display: inline-block;
+	color: white;
+	margin-top: 10px;
 }
 
 .copyrights {
 	color: white;
-       font-style: italic;
-       text-align: right;
-       font-family: courier-new;
+	font-style: italic;
+	text-align: right;
+	font-family: courier-new;
 }
 
 .copyrights #source {
@@ -122,10 +125,4 @@ td {
 
 .copyrights #login {
 	float: right;
-}
-
-.info {
-	font-size: 1.5vw;
-	margin-left: 10%;
-	color: white;
 }

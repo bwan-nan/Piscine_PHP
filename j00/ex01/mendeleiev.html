@@ -16,8 +16,8 @@
 	text-align: center;
 	}
 	td {
-	width: 60px;
-	height: 50px;
+	width: 2%;
+	height: 2%;
 	padding: 0;
 	border-radius: 15px; 
 	font-size: 0;
@@ -63,16 +63,19 @@
 	border: thin black solid;
 	}
 	.weight {
-	font-size: 1.5vh;
+	font-size: 1vmin;
 	text-align: right;
 	}
 	.elem {
 	font-weight: 900;
-	font-size: 2vh;
+	font-size: 1.5vmin;
 	text-align: center;
 	}
 	.nb {
-	font-size: 1.5vh;
+	font-size: 1vmin;
+	}
+	#align-legend {
+	text-align: center;
 	}
 	.legend {
 	display: inline-block;
@@ -92,6 +95,7 @@
 	.legend p {
 	display: inline-block;
 	color: white;
+	margin-top: 10px;
 	}
 	.copyrights {
 	color: white;
@@ -114,9 +118,9 @@
 
 <br />
 <br />
-<p style="margin-left: 125px; color:white;">For elements with no stable isotopes, the mass number of the isotope with the longest half-life is in parentheses.</p>
+<p style="text-align: center; color:white; font-size: 1.5vmin;">For elements with no stable isotopes, the mass number of the isotope with the longest half-life is in parentheses.</p>
 
-<table>
+<table align="center">
 	<tr>
 		<td></td>
 		<td></td>
@@ -328,17 +332,19 @@
 <br />
 <br />
 <br />
-<ul class="legend">
-    <li><span class="orange"></span><p> Alkaline metals</p></li>
-    <li><span class="red"></span><p> Alkaline earth metals</p></li>
-    <li><span class="purple"></span><p> Lanthanoids</p></li>
-    <li><span class="pink"></span><p> Actinoids</p></li>
-    <li><span class="yellow"></span><p> Transition metals</p></li>
-    <li><span class="green"></span><p> Post-transition metals</p></li>
-    <li><span class="lightgreen"></span><p> Metalloids</p></li>
-    <li><span class="lime"></span><p> Other non-metals</p></li>
-    <li><span class="blue"></span><p> Noble gases</p></li>
-</ul>
+<div id="align-legend">
+	<ul class="legend">
+    	<li><span class="orange"></span><p> Alkaline metals</p></li>
+   		<li><span class="red"></span><p> Alkaline earth metals</p></li>
+		<li><span class="purple"></span><p> Lanthanoids</p></li>
+  		<li><span class="pink"></span><p> Actinoids</p></li>
+    	<li><span class="yellow"></span><p> Transition metals</p></li>
+    	<li><span class="green"></span><p> Post-transition metals</p></li>
+    	<li><span class="lightgreen"></span><p> Metalloids</p></li>
+    	<li><span class="lime"></span><p> Other non-metals</p></li>
+    	<li><span class="blue"></span><p> Noble gases</p></li>
+	</ul>
+</div>
 <hr />
 <div class="copyrights">
 	<div id="source"><a href="https://ptable.com/" style=color:white;">source:https://ptable.com/</a></div>

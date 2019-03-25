@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="responsive.css">
 <title>Mendeleev periodic table</title>
+
 </head>
 
 <body>
@@ -11,9 +12,9 @@
 
 <br />
 <br />
-<p class="info">For elements with no stable isotopes, the mass number of the isotope with the longest half-life is in parentheses.</p>
+<p style="text-align: center; color:white; font-size: 1.5vmin;">For elements with no stable isotopes, the mass number of the isotope with the longest half-life is in parentheses.</p>
 
-<table>
+<table align="center">
 	<tr>
 		<td></td>
 		<td></td>
@@ -121,6 +122,7 @@
 		<td contenteditable="true" class="yellow"><p class="weight">106.42</p><p class="elem">Pd</p><p class="nb">46</p>
 		<td contenteditable="true" class="yellow"><p class="weight">107.87</p><p class="elem">Ag</p><p class="nb">47</p>
 		<td contenteditable="true" class="yellow"><p class="weight">112.41</p><p class="elem">Cd</p><p class="nb">48</p>
+<BR />
 		<td contenteditable="true" class="green"><p class="weight">114.81</p><p class="elem">In</p><p class="nb">49</p>
 		<td contenteditable="true" class="green"><p class="weight">118.71</p><p class="elem">Sn</p><p class="nb">50</p>
 		<td contenteditable="true" class="lightgreen"><p class="weight">121.76</p><p class="elem">Sb</p><p class="nb">51</p>
@@ -132,7 +134,7 @@
 	<tr>
 		<td></td>
 		<td></td>
-		<td contenteditable="true" class="orange"><p class="weight">132.91</p><p class="elem">Cs</p><p class="nb">55</p>
+		<td class="orange"><p class="weight">132.91</p><p class="elem">Cs</p><p class="nb">55</p>
 		<td contenteditable="true" class="red"><p class="weight">137.33</p><p class="elem">Ba</p><p class="nb">56</p>
 		<td contenteditable="true" class="purple"><p class="weight" style="color:#ba55d3;">138-174</p><p class="elem" style="color:#ba55d3">La</p><p class="nb">57-71</p>
 		<td contenteditable="true" class="yellow"><p class="weight">178.49</p><p class="elem">Hf</p><p class="nb">72</p>
@@ -160,7 +162,7 @@
 		<td contenteditable="true" class="pink"><p class="weight" style="color:#ffb6c1;">227-262</p><p class="elem" style="color:#ffb6c1">Ac</p><p class="nb">89-103</p>
 		<td contenteditable="true" class="yellow"><p class="weight">(267)</p><p class="elem">Rf</p><p class="nb">104</p>
 		<td contenteditable="true" class="yellow"><p class="weight">(268)</p><p class="elem">Db</p><p class="nb">105</p>
-			<td contenteditable="true" class="yellow"><p class="weight">(269)</p><p class="elem">Sg</p><p class="nb">106</p>
+		<td contenteditable="true" class="yellow"><p class="weight">(269)</p><p class="elem">Sg</p><p class="nb">106</p>
 		<td contenteditable="true" class="yellow"><p class="weight">(270)</p><p class="elem">Bh</p><p class="nb">107</p>
 		<td contenteditable="true" class="yellow"><p class="weight">(270)</p><p class="elem">Hs</p><p class="nb">108</p>
 		<td contenteditable="true" class="grey"><p class="weight">(278)</p><p class="elem">Mt</p><p class="nb">109</p>
@@ -175,7 +177,7 @@
 		<td contenteditable="true" class="grey"><p class="weight">(294)</p><p class="elem">Og</p><p class="nb">118</p>
 		<td></td>
 	</tr>
-	<tr style="height:20px;"></tr>
+	<tr style="height:30px;"></tr>
 	<tr>
 		<td></td>
 		<td></td>
@@ -221,31 +223,25 @@
 		<td contenteditable="true" class="pink"><p class="weight">(266)</p><p class="elem">Lr</p><p class="nb">103</p>
 	</tr>
 </table>
-
-<table class="legend">
-	<tr>
-    	<td class="white"><p>Metals</p>
-    	<td class="orange"><p>Alkaline metals</p>
-    	<td class="red"><p>Alkaline earth metals</p>
-   		<td class="purple"><p>Lanthanoids</p>
-   		<td class="pink"><p>Actinoids</p>
-   		<td class="yellow"><p>Transition metals</p>
-   		<td class="green"><p>Post-transition metals</p>
-	</tr>
-	<tr>
-		<td class="white"><p>Non-metals</p>
-		<td class="blue"><p>Noble gases</p>
-		<td class="lime"><p>Other non-metals</p>
-	</tr>
-	<tr>
-   		<td class="white"><p>Everything else</p>
-   		<td class="lightgreen"><p> Metalloids</p>
-   		<td class="grey"><p>Unclassified</p>
-	</tr>
-</table>
+<br />
+<br />
+<br />
+<div id="align-legend">
+	<ul class="legend">
+    	<li><span class="orange"></span><p> Alkaline metals</p></li>
+   		<li><span class="red"></span><p> Alkaline earth metals</p></li>
+		<li><span class="purple"></span><p> Lanthanoids</p></li>
+  		<li><span class="pink"></span><p> Actinoids</p></li>
+    	<li><span class="yellow"></span><p> Transition metals</p></li>
+    	<li><span class="green"></span><p> Post-transition metals</p></li>
+    	<li><span class="lightgreen"></span><p> Metalloids</p></li>
+    	<li><span class="lime"></span><p> Other non-metals</p></li>
+    	<li><span class="blue"></span><p> Noble gases</p></li>
+	</ul>
+</div>
 <hr />
 <div class="copyrights">
-	<div id="source"><a href="https://ptable.com/" target="_blank" style=color:white;">source:https://ptable.com/</a></div>
+	<div id="source"><a href="https://ptable.com/" style=color:white;">source:https://ptable.com/</a></div>
 	<div id="login">© bwan-nan 2019</div>
 </div>
 <br />
