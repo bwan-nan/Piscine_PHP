@@ -20,7 +20,6 @@ function		create_folder($url)
 
 function		get_img_name($img)
 {
-	echo $img."\n";
 	if (preg_match('/^.*?([^\/]+)$/', $img, $matches))
 		return ($matches[1]);
 }

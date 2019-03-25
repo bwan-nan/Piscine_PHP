@@ -10,7 +10,6 @@ if ($argc >= 3)
 		parse_str($string, $new_table);
 		$hash_table= array_merge($hash_table, $new_table);
 	}
-	print_r($hash_table);
 	if (array_key_exists($argv[1], $hash_table))
 		echo $hash_table[$argv[1]]."\n";
 }
