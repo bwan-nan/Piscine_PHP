@@ -4,6 +4,11 @@ function		parse_csv($fd)
 {
 	$stats = array();
 	$line = fgets($fd);
+	if ($line != "User;Note;Noteur;Feedback\n")
+	{
+		echo "Wrong Format\n";
+		exit (-1);
+	}
 	while ($line = fgets($fd))
 	{
 		$array = explode(';', $line);
