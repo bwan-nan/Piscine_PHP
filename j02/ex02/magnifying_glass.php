@@ -14,7 +14,7 @@ if ($argc == 2)
 		while ($line = fgets($fd))
 		{
 				$line = preg_replace_callback('/<a.*?title="(.*?)">/', 'ft_upper', $line); 
-				$line = preg_replace_callback('/<a.*?>(.*?)</', 'ft_upper', $line); 
+				$line = preg_replace_callback('/<a.*?>(.*?)</', 'ft_upper', $line);  
 				echo $line;
 		}
 	}
