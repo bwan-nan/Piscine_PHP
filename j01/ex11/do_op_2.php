@@ -34,10 +34,15 @@ function		replace_spaces($string)
 	return ($result);
 }
 
+function my_filter($var)
+{
+	return ($var !== NULL && $var !== FALSE && $var !== '');
+}
+
 function ft_split($string)
 {
 	$tab = explode(' ', $string);
-	$result = array_values(array_filter($tab));
+	$result = array_values(array_filter($tab, 'my_filter'));
 	return ($result);
 }
 

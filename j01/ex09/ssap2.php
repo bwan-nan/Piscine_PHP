@@ -1,5 +1,9 @@
 #!/usr/bin/php
 <?php
+function my_filter($var)
+{
+	return ($var !== NULL && $var !== FALSE && $var !== '');
+}
 
 function	get_position($char, $alphabet)
 {
@@ -46,7 +50,7 @@ function		cmp($a, $b)
 function		ft_split($str)
 {
 	$tab = explode(' ', $str);
-	$result = array_filter($tab);
+	$result = array_filter($tab, 'my_filter');
 	return ($result);
 }
 

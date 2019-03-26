@@ -3,5 +3,5 @@
 
 include("ft_split.php");
 
-print_r(ft_split("             42            *         2      "));
+print_r(ft_split("Hello          0   AAA "));
 ?>

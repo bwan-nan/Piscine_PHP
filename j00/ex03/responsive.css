@@ -12,8 +12,8 @@ h1 {
 }
 
 td {
-	width: 2%;
-	height: 2%;
+	width: 6vh;
+	height: auto;
 	padding: 0;
 	border-radius: 15px; 
 	font-size: 0;

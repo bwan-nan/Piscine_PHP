@@ -8,7 +8,8 @@ if ($argc >= 3)
 	{
 		$string = str_replace(':', '=', $argv[$i]);
 		parse_str($string, $new_table);
-		$hash_table= array_merge($hash_table, $new_table);
+		$result = $hash_table + $new_table;
+		$hash_table = $result;
 	}
 	if (array_key_exists($argv[1], $hash_table))
 		echo $hash_table[$argv[1]]."\n";
