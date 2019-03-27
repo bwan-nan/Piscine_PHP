@@ -9,7 +9,7 @@ function		upper_inside($matches)
 function		upper_a($matches)
 {
 	$matches[0] = preg_replace_callback('/>(.*?)</si', 'upper_inside', $matches[0]);
-	$matches[0] = preg_replace_callback('/title="(.*?)"/', 'upper_inside', $matches[0]);
+	$matches[0] = preg_replace_callback('/title="(.*?)"/si', 'upper_inside', $matches[0]);
 	return ($matches[0]);
 }
 
