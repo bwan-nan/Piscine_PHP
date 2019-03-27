@@ -11,12 +11,13 @@ while ($data = fread($fd, 628))
 		//print_r($data);
 		if ($data['type'] == 7)
 		{
-			echo $data['user']." ";
-			echo $data['line']."  ";
 			$date = ucfirst(strftime('%h %d %H:%M', $data['time'])); 
-			echo $date."\n";
+			$result[] = $data['user']." ".$data['line']."  ".$date;
 		}
 	}
 }
+sort($result);
+foreach($result as $elem)
+	echo $elem."\n";
 
 ?>

@@ -46,7 +46,7 @@ function		get_imgs($html, $url)
 	preg_match_all('/<img[^>]+src="([^\s>]+)"/', $html, $matches);
 	foreach ($matches[1] as $elem)
 	{
-		if (preg_match('|^(http(s?):\/\/)([^\/]+)|', $elem))
+		if (preg_match('|^(http(s?):\/\/)(.*)|', $elem))
 			$imgs[] = $elem;
 		else
 			$imgs[] = $url.$elem;
