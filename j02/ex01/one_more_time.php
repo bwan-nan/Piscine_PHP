@@ -33,10 +33,32 @@ function		leap_exceptions($array)
 	return ($is_leap_year ? 1 : 0);
 }
 
+function		good_format($string)
+{
+	$string = trim($string);
+	$array = explode(' ', $string);
+	$days = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche');
+	$months = array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+					'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
+	//print_r($array);
+	if (count($array) == 5)
+	{
+		if (in_array(ucfirst($array[0]), $days)
+		&& preg_match('/^[0-9]{1,2}$/', $array[1])
+		&& in_array(ucfirst($array[2]), $months)
+		&& preg_match('/^[0-9]{4}$/', $array[3]) && $array[3] >= 1970
+		&& preg_match('/^[0-9]{2}:[0-9]{2}:[0-9]{2}$/',  $array[4]))
+			return (1);
+	}
+	return (0);
+}
+
 if ($argc ==2)
 {
 
 	setlocale(LC_TIME, 'fr_FR');
+	if (!good_format($argv[1]))
+		die ("Wrong Format\n");
 	$array = strptime($argv[1], '%A %d %B %Y %H:%M:%S');
 //	print_r($array);
 	if ($array && ($is_leap_year = leap_exceptions($array)) != -1
