@@ -12,7 +12,7 @@ while (1)
 	}
 	if (!is_numeric($input))
 		print("'$input' is not a number\n");
-	else if ($input % 2)
+	else if (substr($input, -1) % 2)
 		print("The number is odd\n");
 	else
 		print("The number is even\n");

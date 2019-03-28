@@ -6,7 +6,7 @@ function my_filter($var)
 
 function ft_split($string)
 {
-	$tab = explode(' ', $string);
+	$tab = explode(' ', trim($string));
 	$result = array_filter($tab, 'my_filter');
 	sort($result);
 	return ($result);
