@@ -15,10 +15,20 @@ $chat = unserialize($file);
 $fd = fopen('../private/chat', 'r+');
 flock($fd, LOCK_EX);
 $message = array(
-	'login' => $_SESSION['loggued_on_user',
+	'login' => $_SESSION['loggued_on_user'],
 	'time' => time();
-	'msg' => $_POST['msg'];
+'msg' => $_POST['msg'];
 );
-file_put_contents('../private/chat', serialize($
-$
+$chat[] = $message;
+file_put_contents('../private/chat', serialize($chat));
+fclose($fd);
 ?>
+<html>
+	<head>
+	<script language="javascript">top.frames['chat'].location="chat.php";</script>
+</head>
+<body>
+<form action="speak.php" method="POST">
+<input type="text" name="msg" value=""/><input type="submit" name="submit" value="Send"/>
+</form>
+</body>

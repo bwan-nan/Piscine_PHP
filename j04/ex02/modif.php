@@ -1,7 +1,7 @@
 <?php
 
 if ($_POST['login']
-&& $_POST['oldpw']	&& $_POST['newpw']
+&& $_POST['oldpw'] && $_POST['newpw']
 && $_POST['submit'] && $_POST['submit'] === 'OK')
 {
 	$content = file_get_contents('../private/passwd');
@@ -20,7 +20,6 @@ if ($_POST['login']
 		}
 		echo "ERROR\n";
 	}
-
 }
 else
 	echo "ERROR\n";

@@ -10,7 +10,6 @@ function		login_exists($accounts)
 
 session_start();
 
-//echo "Creating user:\nLogin: ".$_POST['login']."\nPasswd: ".$_POST['passwd']."\nhash: ".hash('sha512', $_POST['passwd'])."\n"; 
 if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] && $_POST['submit'] === 'OK')
 {
 	if (!file_exists('../private'))
@@ -29,7 +28,6 @@ if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] && $_POST['submit'] 
 		$accounts[] = $new_user;
 		file_put_contents('../private/passwd', serialize($accounts));
 		echo "OK";
-		header('Location: index.html');
 	}
 }
 else
