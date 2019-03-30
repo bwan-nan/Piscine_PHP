@@ -27,6 +27,7 @@ if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] && $_POST['submit'] 
 		);
 		$accounts[] = $new_user;
 		file_put_contents('../private/passwd', serialize($accounts));
+		header('Location: index.html');
 		echo "OK";
 	}
 }

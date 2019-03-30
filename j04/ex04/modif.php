@@ -15,6 +15,7 @@ if ($_POST['login']
 			{
 				$account['passwd'] = hash('sha512', $_POST['newpw']);
 				file_put_contents('../private/passwd', serialize($accounts));
+				header('Location: index.html');
 				die ("OK\n");
 			}
 		}
