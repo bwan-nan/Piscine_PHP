@@ -1,0 +1,13 @@
+.border
+{
+	border-style: solid;
+	border-width: 1;
+}
+.item_options
+{
+	background-color: red;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<form method="post" action="../PHP/create_item.php">
+	Nom: <input type="text" name="name"><br />
+	Prix: <input type="text" name="price"><br />
+	Image url: <input type="text" name="url"><br />
+	Tags(separes par une virgule): <input type="text" name="tags"><br />
+	<input type="submit" name="submit" value="create">
+</form>
+<br />
+<form method="post" action="../PHP/modif_item.php">
+	Old Id: <input type="text" name="oldname"><br />
+	Id: <input type="text" name="name"><br />
+	Price: <input type="text" name="price"><br />
+	Image url: <input type="text" name="url"><br />
+	Tags(separated by commas): <input type="text" name="tags"><br />
+	<input type="submit" name="submit" value="modify">
+</form>
+<form method="post" action="../PHP/del_item.php">
+	Identifiant: <input type="text" name="name"><br />
+	<input type="submit" name="submit" value="delete">
+</form>
+<br /><a href="../PHP/index.php">Back to Home Page</a>
