@@ -1,0 +1,17 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles vertexes in 3D space.
+It is composed of:
+- 3 coordinates : x, y, and z;
+- 1 homogeneous coordinate 'w' set to 1.0 by default;
+- a 'color' in rgb format.
+
+An instance is contructed from the three x,y,z values:
+new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+'w' (for the homogeneous paramater) and 'color' (for the instance of Color)
+can be added in the constructor aswell:
+new Vertex( array( [x,y,z..] , 'w' => 2.0, 'color' => #instanceOfColor ) );
+Default values are respectivly 1.0 and white (0xFFFFFF)
+
+Attributes are private, you may want to use getter and setter.
+---------------------------------------------------------------------- Vertex ->
