@@ -35,10 +35,11 @@ Class Vertex {
 
 	public function			__destruct() {
 		if (Self::$verbose == True)
-			printf("Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, Color( red: %3d, green: %3d, blue: %3d ) ) destructed\n",
+			return (printf(
+				"Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, Color( red: %3d, green: %3d, blue: %3d ) ) destructed\n",
 				$this->_x, $this->_y, $this->_z, $this->_w,
 				$this->_color->red, $this->_color->green, $this->_color->blue
-			);
+			));
 		return ;
 	}
 
