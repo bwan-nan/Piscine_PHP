@@ -18,14 +18,14 @@ Class Vertex {
 			$this->_y = $kwargs['y'];
 			$this->_z = $kwargs['z'];
 			if (array_key_exists('w', $kwargs) && isset($kwargs['w']))
-				$this->_y = $kwargs['w'];
+				$this->_w = $kwargs['w'];
 			if (array_key_exists('color', $kwargs) && isset($kwargs['color']) && $kwargs['color'] instanceof Color)
 				$this->_color = $kwargs['color'];
 			else
 				$this->_color = new Color( array('red' => 255, 'green' => 255, 'blue' => 255) );
 			if (Self::$verbose == True)
 				printf(
-					"Vertex( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f, Color( red: %3d, green: %3d, blue: %3d ) ) constructed\n",
+					"Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, Color( red: %3d, green: %3d, blue: %3d ) ) constructed\n",
 					$this->_x, $this->_y, $this->_z, $this->_w,
 					$this->_color->red, $this->_color->green, $this->_color->blue
 				);
@@ -36,7 +36,7 @@ Class Vertex {
 	public function			__destruct() {
 		if (Self::$verbose == True)
 			return (printf(
-				"Vertex( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f, Color( red: %3d, green: %3d, blue: %3d ) ) destructed\n",
+				"Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, Color( red: %3d, green: %3d, blue: %3d ) ) destructed\n",
 				$this->_x, $this->_y, $this->_z, $this->_w,
 				$this->_color->red, $this->_color->green, $this->_color->blue
 			));
@@ -46,12 +46,12 @@ Class Vertex {
 	public function			__toString() {
 		if (Self::$verbose == True)
 			return (vsprintf(
-				"Vertex( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f, Color( red: %3d, green: %3d, blue: %3d ) )",
+				"Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, Color( red: %3d, green: %3d, blue: %3d ) )",
 				array($this->_x, $this->_y, $this->_z, $this->_w,
 				$this->_color->red, $this->_color->green, $this->_color->blue
 			)));
 		return (vsprintf(
-			"Vertex( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f )",
+			"Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f )",
 			array($this->_x, $this->_y, $this->_z, $this->_w
 		)));
 	}
@@ -101,7 +101,6 @@ Class Vertex {
 		echo "\n";
 		while ($line = fgets($fd))
 			echo $line;
-		echo "\n";
 	}
 }
 ?>
