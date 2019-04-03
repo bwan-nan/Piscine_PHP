@@ -1,0 +1,19 @@
+<?php
+/* This should be the right way
+Class Tyrion extends Lannister {
+	public function	__construct() {
+		parent::__construct();
+		echo 'My name is Tyrion' . PHP_EOL;
+	}
+
+	public function getSize() {
+		echo 'Short';
+	}
+}*/
+
+Class Tyrion extends Lannister {
+	public function getSize() {
+		return ( 'My name is Tyrion' . "\n" . 'Short' );
+	}
+}
+?>
