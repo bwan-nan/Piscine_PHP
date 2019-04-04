@@ -1,7 +1,7 @@
 <?php
 
 Class NightsWatch implements IFighter {
-	private $man = [];
+	private $solider = [];
 
 	public function recruit($soldier) {
 		$this->soldier[] = $soldier;
