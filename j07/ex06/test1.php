@@ -38,12 +38,23 @@ class Llama {
 		print ("* spits at " . $target . " *" . PHP_EOL);
 	}
 }
+/*
+class Cavalier extends Fighter {
+	public function __construct() {
+		parent::__construct("assassin");
+	}
+
+	public function fight($target) {
+		print ("* creeps behind " . $target . " and stabs at it *" . PHP_EOL);
+	}
+}*/
 
 $uf = new UnholyFactory();
 $uf->absorb(new Footsoldier());
 $uf->absorb(new Footsoldier());
 $uf->absorb(new Archer());
 $uf->absorb(new Assassin());
+//$uf->absorb(new Cavalier());
 $uf->absorb(new Llama());
 
 $requested_fighters = Array(
@@ -55,6 +66,7 @@ $requested_fighters = Array(
 	"assassin",
 	"foot soldier",
 	"archer",
+//	"cavalier"
 );
 
 $actual_fighters = Array(

@@ -1,13 +1,12 @@
 <?php
-
-Class Jaime {
-	public function sleepWith($somebody) {
-		if ($somebody instanceof Tyrion)
-			echo "Not even if I'm drunk !" . PHP_EOL;
-		else if ($somebdoy instanceof Sansa)
-			echo "Let's do this." . PHP_EOL;
-		else if ($somebody instanceof Cersei)
-			echo "With pleassure, but only in a tower in Winterfell, then." . PHP_EOL;
-	}
-}
+	  class Jaime extends Lannister {
+	  	public function With($obj_clas) {
+	  		if (get_parent_class($obj_clas) !== "Lannister")
+	  			return ("Let's do this");
+	  		elseif (get_class($obj_clas) === "Cersei") 
+	  			return ("With pleasure, but only in a tower in Winterfell, then.");
+	  		else
+				return ("Not even if I'm drunk !");
+	  	}
+	  }
 ?>
