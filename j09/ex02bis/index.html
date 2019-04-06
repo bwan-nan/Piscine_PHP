@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>To do or not to do</title>
+	<script src="todo.js"></script>
+<style>
+	body {
+		float: left;
+		background-color: #00FFBF; 
+	}
+
+	#ft_list div {
+		background-color: white;
+		width: auto;
+		height: auto;
+		border: 0.5px solid black;
+		margin: 10px;
+		padding: 10px;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+	$(document).ready(function() {
+		new_todo = $('#new');
+		cookies = document.cookie;
+		if (cookies) {
+			cookies = JSON.parse(cookies);
+			for (key in cookies)
+				createDiv(key, cookies[key]);
+		}
+		new_todo.click(insertTODO);
+	});
+</script>
+</head>
+<body>
+	<div id="ft_list">
+	</div>
+	<button id="new">New</button>
+</body>
+</html>
