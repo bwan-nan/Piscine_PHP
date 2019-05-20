@@ -1,13 +1,1 @@
-# Piscine_PHP
-Day00: 90
-Day01: 100
-Day02: 60
-Day03: 100
-Day04: 100
-Day05: 65
-Day06: 32
-Day07: 100
-Day08: 0
-Day09: 80
-Rush00: 102
-Rush01: 0
+
